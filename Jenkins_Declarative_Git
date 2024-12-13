@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages{
+        stage("checkout"){
+            steps{
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rajasekhar72/rajarepo2024.git'
+            }
+        }
+    }
+}
